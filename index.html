@@ -387,6 +387,26 @@
         </div>
     </section>
 
+    </style>
+    <script>
+        // Evitar Ctrl + S y Ctrl + U
+        document.addEventListener('keydown', function(e) {
+            if ((e.ctrlKey && e.key === 's') || (e.ctrlKey && e.key === 'u')) {
+                e.preventDefault();
+                alert("Acción deshabilitada");
+            }
+        });
+
+        // Deshabilitar clic derecho
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+            alert("Clic derecho deshabilitado");
+        });
+    </script>
+</head>
+<body>
+
+
     <section id="soporte-contacto">
         <h3>Soporte y Contacto</h3>
         <div class="contact-info">
